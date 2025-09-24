@@ -1,18 +1,20 @@
 import random
+
 Selections = ("rock","paper","scissors")
 PC_choice = random.choice(Selections)
-#print(PC_choice)
 
 User_Input = input("Rock , Paper , Scissors Select?")
 User_Input = User_Input.lower()
 
 if User_Input not in Selections:
-    print("Error")
+    message = print("Error Invalid Selection")
+else:
+   print("")
 
 while True:
  
  if User_Input == PC_choice: 
-    print("Draw")
+    print(f"Draw I also chose {User_Input}")
  elif User_Input == "rock" and PC_choice == "paper":
     print("User has won")
  elif User_Input == "paper" and PC_choice == "rock":
@@ -27,10 +29,4 @@ while True:
     print("PC has won")
  break
 
-print(f"The PC chose {PC_choice} also")
-
-
-#else:
-  #print("Invalid entry")
-
-
+print(f"I chose {PC_choice}")
